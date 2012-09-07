@@ -1,0 +1,28 @@
+<h1>Listing admin_roles</h1>
+
+<table class="table">
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_roles.each do |admin_role| %>    
+  <tr>
+    <td>      
+      <%= admin_role.name %>
+    </td>
+    <td>      
+      <%= link_to "Edit", {:action => "edit", :id => admin_role.id, :method => "put"} %>
+    </td>
+    <td>      
+      <%= link_to "Delete", {:action => "destroy", :id => admin_role.id}, :method => "delete" %>
+    </td>
+  </tr>  
+<% end %>
+
+</table>
+
+<br />
+
+<%= link_to 'New Role', new_admin_role_path %>

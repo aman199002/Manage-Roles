@@ -1,0 +1,10 @@
+<h3>Home</h3>
+<table>  
+  <% @users.each do |user| %>
+    <tr>
+      <td>	
+        <p>User: <%=link_to user.name, user %></p>
+      </td>      
+    </tr>  
+  <% end %>
+</table>
